@@ -21,7 +21,7 @@ class Email {
         const mailOptions = {
             from: process.env.USERNAME,
             to: process.env.USERNAME,
-            subject: `Reminder at ${new Date()}`,
+            subject: `Reminder at ${new Date().toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})}`,
             text: process.env.MESSAGE
         };
         this.transporter.sendMail(mailOptions, (error, info) => {
