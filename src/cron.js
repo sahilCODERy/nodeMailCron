@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const email = require('./email');
 
-const job = cron.schedule('*/10 * * * *', () => {
+const job = cron.schedule('00 21 * * *', () => {
     email.sendMail();
 })
 const job2 = cron.schedule('30 21 * * *', () => {
